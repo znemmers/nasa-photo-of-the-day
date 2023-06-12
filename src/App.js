@@ -1,7 +1,14 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
-import "./App.css";
 import NasaPhoto from './Components/NasaPhoto'
+import styled from 'styled-components'
+
+const WrapperDiv = styled.div `
+  text-align: center;
+  color: blue;  
+
+`;
+
 
 function App() {
   const [data, setData] = useState()
@@ -17,9 +24,9 @@ function App() {
 
 
   return (
-    <div className="App">
+    <WrapperDiv className="App">
      {data && <NasaPhoto photo={data} />}
-    </div>
+    </WrapperDiv>
   );
 }
 
